@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f5a853a818.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        body{
+            background-color: #0d0e28;
+            background-repeat: no-repeat;
+        }
+
+        .about{
+            display: flex;
+            position: relative;
+            width: fit-content;
+            height: 45vw;
+        }
+        .textbox{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            width: 38vw;
+            position: relative;
+        }
+        .text{
+            font-family: 'Karla', sans-serif;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5vw;
+            position: relative;
+            left: 12vw;
+            color: aliceblue;
+        }
+        .img{
+            top: 0vw;
+            width: 50vw;
+            left: 41vw;
+            position: absolute;
+        }
+
+        .redirect{
+            top: 3vw;
+            left: 3vw;
+            font-size: 3vw;
+            border-radius: 2vw;
+            position: fixed;
+            color: whitesmoke;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 30ms ease-in-out;
+            width: 4vw;
+            height: 4vw;
+        }
+
+        .redirect:hover{
+            background-color: #7b7b7b;
+        }
+
+     
+        /* Phone */
+        @media only screen and (max-width: 600px) {
+
+            
+
+
+
+        }
+
+
+        /* TABLET */ 
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+
+        }
+    </style>
+
+
+    <div class="about">
+        <div class="textbox">
+            <p class="text"> Touch someone by using live chat</p>
+            <p class="text"> Chance to meet someone new!</p>
+            <p class="text"> Sentiment Analysis on each message! (New Feature!)</p>
+        </div>
+        <img class="img" src="https://cactussoft.biz/wp-content/uploads/2020/03/1_oPsRXFXI_F4mT0v36SvjbQ.png" alt="">
+    </div>
+
+    <a class="redirect" href="/main"><i class="fa-solid fa-arrow-left"></i></a>
+
+
+
+
+</body>
+</html>

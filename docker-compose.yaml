@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+
+  mysql:
+    container_name: "mysql"
+    image: mysql:8.0.32
+    restart: always
+    volumes:
+      - db2_data:/var/lib/mysql
+      - ./NodeServer/data/init-script.sql:/docker-entrypoint-initdb.d/init-script.sql
+    ports:
+      - 3306:3306
+    networks:
+      - mynetwork
+    environment:
+        - MYSQL_ROOT_PASSWORD=password
+        - MYSQL_DATABASE=message
+        - MYSQL_HOST=mysql
+        - MYSQL_PASSWORD=password
+        - MYSQL_PORT=3306
+      
+  redis:
+    container_name: "redis"
+    image: redis:latest
+    restart: always
+    volumes:
+      - redis_data:/var/lib/redis_data
+    networks:
+      - mynetwork
+    ports:
+          - 6379:6379
+
+  node_server:
+    container_name: "node_server"
+    build:
+      context: ./NodeServer
+      dockerfile: Dockerfile
+    volumes:
+      - node_data:/var/lib/node_data
+    networks:
+      - mynetwork
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
+
+volumes:
+  node_data:
+  db2_data:
+  redis_data:
+
+networks:
+  mynetwork:

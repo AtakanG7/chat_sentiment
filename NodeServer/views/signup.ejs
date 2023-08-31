@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f5a853a818.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        
+        display: flex;
+        flex-direction: column;
+        background-image: url(https://wallpapercave.com/wp/wp11455892.jpg);
+
+    }
+
+    .typewriter{
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+            typing 2s steps(13, end),
+            blink-caret 900ms step-end infinite;
+        background-color: #ffffff00;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0}
+        to { width: 100% }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+    }
+
+    .loginBox{
+        position: fixed;
+        display: flex;
+        width: 43vw;
+        height: 22vw;
+        border: outset;
+        flex-wrap: nowrap;
+        border-radius: 6vw;
+        background: #190d0d6b;
+        align-items: center;
+        justify-content: center;
+        left: 27vw;
+        top: 12vw;
+
+    }
+
+    .username{
+        top: 3vw;
+        font-size: 1.5vw;
+        border-radius: 1vw;
+        padding-left: 1vw;
+        width: 15vw;
+        padding-right: 1vw;
+        height: 2.2vw;
+        left: 4.7vw;
+        border: none;
+        font-family: 'Oswald', sans-serif;
+        position: absolute;
+    }
+
+    .surname{
+        top: 7vw;
+        font-size: 1.5vw;
+        border-radius: 1vw;
+        padding-left: 1vw;
+        width: 15vw;
+        padding-right: 1vw;
+        height: 2.2vw;
+        left: 4.7vw;
+        border: none;
+        font-family: 'Oswald', sans-serif;
+        position: absolute;
+    }
+
+
+    .log{
+        bottom: 2vw;
+        cursor: pointer;
+        color: aliceblue;
+        font-family: fantasy;
+        left: 16vw;
+        font-size: 1.5vw;
+        background: #6a494926;
+        transition: all 100ms ease-in;
+        position: absolute;
+    }
+
+    .log:hover{
+        transform: scale(1.2,1.2);
+    }
+
+    .checkbox{
+        top: 0vw;
+        left: 0vw;
+        border: none;
+        width: 1vw;
+        position: relative;
+        transition: all 100ms ease-in;
+        cursor: pointer;
+        height: 1vw;
+    }
+
+    .checkbox:hover{
+        transform: scale(1.2,1.2);
+    }
+
+    .figure1{
+        position: absolute;
+        left: 2vw;
+        bottom: 11.8vw;
+        font-size: 1.5vw;
+        color: rgb(255, 255, 255);
+    }
+
+    .figure2{
+        position: absolute;
+        left: 2vw;
+        bottom: 7.8vw;
+        font-size: 1.5vw;
+        color: rgb(255, 255, 255);
+
+    }
+    
+    .rememberme{
+        font-size: 1vw;
+        position: relative;
+        font-family: 'Oswald', sans-serif;
+        color: #b9acac;
+        min-width: 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup1{
+        width: 6vw;
+        top: 17vw;
+        color: red;
+        display: flex;
+        background-color: #fb0e0e24;
+        position: absolute;
+        left: 60vw;
+        max-width: 6vw;
+        border-radius: 10px;
+        font-family: 'Karla', sans-serif;
+        font-family: 'Oswald', sans-serif;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup2{
+        width: 6vw;
+        top: 21vw;
+        color: red;
+        display: flex;
+        background-color: #fb0e0e24;
+        position: absolute;
+        left: 60vw;
+        max-width: 6vw;
+        border-radius: 10px;
+        font-family: 'Karla', sans-serif;
+        font-family: 'Oswald', sans-serif;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .redirect{
+        top: 3vw;
+        left: 3vw;
+        font-size: 3vw;
+        border-radius: 2vw;
+        position: fixed;
+        color: whitesmoke;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 30ms ease-in-out;
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .redirect:hover{
+        background-color: #202020;
+    }
+
+    .inputbox{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25vw;
+        height: 17vw;
+        overflow: hidden;
+    }
+
+    .checking{
+        left: 4vw;
+        position: absolute;
+        top: 10vw;
+        width: 9vw;
+        height: 2vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .img{
+        top: 71%;
+        width: 11vw;
+        position: absolute;
+        left: 3%;
+    }
+
+    /* Phone */
+    @media only screen and (max-width: 600px) {
+
+        
+
+
+
+    }
+
+
+    /* TABLET */ 
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+
+    }
+
+    .notApproval{
+
+    }
+
+    .Approval{
+        display: flex;
+        position: relative;
+        width: 500px;
+        left: 34%;
+        height: 500px;
+        top: 5vw;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .Approval img{
+        width: 208px;
+        position: relative;
+        left: 25%;
+    }
+
+    .login{
+        font-size: 30px;
+        top: 11%;
+        left: 34%;
+        position: relative;
+        width: 114px;
+        border: solid;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border-radius: 1vw; */
+        background-color: #b9030300;
+        color: #211b3b;
+        transition: all 100ms ease-in-out;
+    }
+
+    .login:hover{
+        border-radius: 1vw;
+    }
+
+    .message{
+        color: white;
+        font-size: 31px;
+        position: relative;
+        top: 3%;
+        left: 32%;
+        width: 39%;
+    }
+    </style>
+    
+
+    <a class="redirect" href="/main"><i class="fa-solid fa-arrow-left"></i></a>
+
+    <form id="form" class="form">
+        <div class="loginBox">
+            <div class="inputbox">
+                <input type="text" id="username" class="username" placeholder="create a user name..."> <div class=" figure1"><i class="fa-sharp fa-regular fa-user"></i></div> 
+                <input type="password" id="password" class="surname" placeholder="create a password..."> <div class="figure2"><i class="fa-solid fa-lock"></i></div>
+
+                <button class="log">Submit</button>
+            </div>
+        </div>
+    </form>  
+
+    <img class="img" src="https://cdni.iconscout.com/illustration/premium/thumb/security-app-with-fingerprint-or-access-code-3159824-2631916.png" alt="">
+</body>
+
+<p class="popup1" style="color:red; display: none;">required filed!</p>
+<p class="popup2" style="color:red; display: none;">required filed!</p>
+
+<p class="notApproval" style="display: none;">Username in use!</p>
+<p class="Approval" style="display: none;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Antu_task-complete.svg/1200px-Antu_task-complete.svg.png" alt="Approved!">
+    <a class="message">Successful!</a>
+    <a class="login" href="/login">Login</a>
+</p>
+
+<script>
+
+
+    
+    const approval = document.querySelector(".Approval");
+    const form = document.querySelector(".form");
+    const username = document.querySelector(".username");
+    const password = document.getElementById("password");
+    const popup1 = document.querySelector(".popup1");
+    const popup2 = document.querySelector(".popup2");
+
+
+
+  
+        form.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+            let myusername = username.value;
+            let mypassword =  password.value;
+
+            if(myusername == "" && mypassword == ""){
+                setTimeout( () => {
+                    popup1.style.display = "flex";
+                    popup2.style.display = "flex";
+                },100);
+
+            }else if(myusername == ""){
+                setTimeout( () => {
+                    popup1.style.display = "flex";
+                    popup2.style.display = "none";
+                },100);
+
+
+            }else if(mypassword == ""){
+                setTimeout( () => {
+                    popup1.style.display = "none";
+                    popup2.style.display = "flex";
+                },100);
+            }else{
+                setTimeout( () => {
+                    popup1.style.display = "none";
+                    popup2.style.display = "none";
+                },100);
+            }
+
+         });
+
+        async function signUpUsers(username,password,timestamp){
+
+                
+                try{
+                    if(( username != "" && password != "")){
+
+                        fetch("/signup/process", {
+                        method:"POST",
+                        headers: {
+                            "Content-Type":"application/json"
+                        },
+                        body: JSON.stringify({
+                            username: username,
+                            password: password,
+                            timestamp: timestamp,
+
+                        })
+                        }).then(res => {
+                        
+                        
+                            return  res.text();
+                           
+
+                        }).then(data =>{
+
+                            if(data == "Ok!"){
+
+                                  form.style.display = "none";
+                                  approval.style.display = "flex";
+                                  
+
+                            }else if(data == "not Ok!"){
+
+                                setTimeout(() => {
+                                    
+                                }, 1000);
+
+                            }else{
+                                return;
+                            }
+
+
+                        }).catch(err => {
+                        console.log( "while signing" + err);
+                        });
+
+                        }else{
+                        return;
+                        }
+
+                } catch(err){
+
+                    console.log(err);
+
+                };
+               
+        }
+
+
+            form.addEventListener("submit", async (event) =>{
+                event.preventDefault();
+
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                const now = new Date();
+                const tzOffset = 3; // Türkiye'nin saat dilimi ofseti (UTC+03:00)
+                const timestamp = new Date(now.getTime() + tzOffset * 3600000).toISOString().slice(0, 23);
+
+                await signUpUsers(username,password,timestamp)
+  
+
+            });
+
+
+    
+</script>
+</html>
